@@ -6,8 +6,13 @@ authors = [
     {name = "MihaelOli",email = "michaeloliveira38@gmail.com"}
 ]
 readme = "README.md"
+package-mode = false
 requires-python = ">=3.10"
 dependencies = [
+    "sqlalchemy (>=2.0.43,<3.0.0)",
+    "fastapi (>=0.116.2,<0.117.0)",
+    "uvicorn (>=0.35.0,<0.36.0)",
+    "python-multipart (>=0.0.20,<0.0.21)"
 ]
 
 

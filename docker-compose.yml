@@ -1,19 +1,14 @@
-version: '3.8'
+version: "3.8"
 services:
-  postgres:
-    image: postgres:latest
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=desafio_api
+      - ./backend:/app
+      - ./desafio_api.db:/app/desafio_api.db
     networks:
       - mynetwork
-  backend:
 
 networks:
   mynetwork:
-
-volumes:
-  postgres_data:
