@@ -1,11 +1,11 @@
 version: "3.8"
 services:
   backend:
-    build: ./backend
+    build: .
     ports:
       - "8000:8000"
     volumes:
-      - ./backend:/app
+      - .:/app
       - ./desafio_api.db:/app/desafio_api.db
     networks:
       - mynetwork
