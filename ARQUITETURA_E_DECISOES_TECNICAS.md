@@ -39,7 +39,7 @@ Esta API foi desenvolvida como resposta ao **Desafio Técnico - FastAPI + SQLite
 2. **Testabilidade**: Serviços podem ser testados de forma independentemente
 3. **Manutenibilidade**: Mudanças em uma camada não afetam as outras
 4. **Reutilização**: Serviços podem ser reutilizados em diferentes routers
-5. **Escalabilidade**: Fácil adicionar novas funcionalidades
+5. **Escalabilidade**: Possibilidade em adicionar novas funcionalidades 
 
 ---
 
