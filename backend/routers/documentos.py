@@ -19,7 +19,7 @@ async def upload_documento(
     """
     Estou usando o PyPDF2 para ler o PDF e extrair o texto e ele nao
     vai conseguir ler documentos com textos de formatacao
-    ou imagens complexos e se ler pode acabar desestruturando os dados.
+    e/ou imagens complexos e se ler pode acabar desestruturando os dados.
     
     - **Observacao**: Antes de fazer o upload, é preciso realizar autenticacao nas rotas acima
     do contrario, retorna 403 Not authenticated
@@ -51,7 +51,7 @@ async def listar_documentos(
     usuario_atual: Usuario = Depends(ServicoAutenticacao.obter_usuario_atual)
 ):
     """
-    Lista documentos do usuário logado
+    Lista os documentos que o usuário logado subiu.
     
     - **pular**: Número de registros para pular (paginação)
     - **limite**: Número máximo de registros por página
@@ -69,7 +69,7 @@ async def obter_documento(
     usuario_atual: Usuario = Depends(ServicoAutenticacao.obter_usuario_atual)
 ):
     """
-    Obtém um documento específico pelo ID
+    Consulta um documento específico pelo ID
     
     - **id_documento**: ID do documento
     """
