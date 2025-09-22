@@ -47,7 +47,7 @@ Esta API foi desenvolvida como resposta ao **Desafio Técnico - FastAPI + SQLite
 
 ### **FastAPI** - Framework Web
 
-**Por que FastAPI?**
+### **Por que FastAPI?** - Além de ter sido solicitação do desafio:
 
 - **Performance**: Uma das APIs mais rápidas do Python
 - **Type Hints**: Validação automática de tipos
