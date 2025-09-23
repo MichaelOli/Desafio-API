@@ -6,7 +6,7 @@ from backend.services.servico_autenticacao import ServicoAutenticacao
 
 
 class ServicoUsuario:
-    """Service para operações relacionadas a usuarios"""
+    """Classe  para operacoes relacionadas a usuarios"""
 
     @staticmethod
     def verificar_usuario_existente(
@@ -94,7 +94,7 @@ class ServicoUsuario:
             senha: Senha do usuario
 
         Returns:
-            Usuario: usuario válido
+            Usuario: usuario valido
 
         Raises:
             HTTPException: Se credenciais inválidas ou usuario inativo
