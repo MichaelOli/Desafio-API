@@ -6,3 +6,8 @@ __pycache__/
 .env
 *.db
 *.log
+
+# Arquivos de teste
+*.pdf
+*.txt
+documento_teste.txt
