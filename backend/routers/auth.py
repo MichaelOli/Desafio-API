@@ -35,7 +35,7 @@ async def login_usuario(credenciais: UsuarioLogin, db: Session = Depends(conexao
     
     return {"access_token": token_acesso, "token_type": "bearer"}
 
-@router.get("/me", response_model=UsuarioResposta)
+@router.get("/eu", response_model=UsuarioResposta)
 async def obter_dados_usuario_atual(usuario_atual: Usuario = Depends(ServicoAutenticacao.obter_usuario_atual)):
     """
     Retorna os dados do usuário logado

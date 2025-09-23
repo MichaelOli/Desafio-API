@@ -11,7 +11,7 @@ from backend.models import Usuario
 from backend.schemas.usuario import TokenDados
 
 # Configurações de segurança
-CHAVE_SECRETA = os.getenv("SECRET_KEY")
+CHAVE_SECRETA = os.getenv("CHAVE_SECRETA")
 ALGORITMO = "HS256"
 MINUTOS_EXPIRACAO_TOKEN = 30
 

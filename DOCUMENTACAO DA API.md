@@ -1,8 +1,4 @@
-# Documentação da API - Extração de Texto de PDF
-
-## Visão Geral
-
-Esta API permite o upload de arquivos PDF, extração automática de texto e gerenciamento completo dos documentos através de operações CRUD. Todas as operações requerem autenticação JWT, exceto o registro e login de usuários.
+# Documentação da API - Extração de Texto de PDF - Rotas
 
 ## Base URL
 
@@ -15,7 +11,7 @@ http://localhost:8000
 A API utiliza JWT (JSON Web Tokens) para autenticação. Para acessar endpoints protegidos, inclua o token no header Authorization:
 
 ```
-Authorization: Bearer SEU_TOKEN_AQUI
+Authorization: Bearer SEU_TOKEN
 ```
 
 ## Endpoints de Autenticação
@@ -49,12 +45,12 @@ Registra um novo usuário no sistema.
 
 **Códigos de Erro:**
 
-- `400 Bad Request`: Dados inválidos ou usuário já existe
-- `422 Unprocessable Entity`: Erro de validação
+- `400 Bad Request`: Dados invalidos ou usuario ja existe
+- `422 Unprocessable Entity`: Erro de validacao
 
 ### POST /auth/login
 
-Autentica um usuário e retorna token de acesso.
+Autentica um usuario e retorna token de acesso.
 
 **Request Body:**
 
@@ -76,17 +72,17 @@ Autentica um usuário e retorna token de acesso.
 
 **Códigos de Erro:**
 
-- `401 Unauthorized`: Credenciais inválidas
-- `422 Unprocessable Entity`: Erro de validação
+- `401 Unauthorized`: Credenciais invalidas
+- `422 Unprocessable Entity`: Erro de validacao
 
-### GET /auth/me
+### GET /auth/eu
 
 Retorna os dados do usuário autenticado.
 
 **Headers:**
 
 ```
-Authorization: Bearer SEU_TOKEN_AQUI
+Authorization: Bearer SEU_TOKEN
 ```
 
 **Response (200 OK):**
@@ -104,18 +100,18 @@ Authorization: Bearer SEU_TOKEN_AQUI
 
 **Códigos de Erro:**
 
-- `401 Unauthorized`: Token inválido ou expirado
+- `401 Unauthorized`: Token invalido ou expirado
 
 ## Endpoints de Documentos
 
 ### POST /documentos/upload
 
-Upload de arquivo PDF e extração de texto.
+Upload de arquivo PDF e extração de texto. Necessita esta autenticado.
 
 **Headers:**
 
 ```
-Authorization: Bearer SEU_TOKEN_AQUI
+Authorization: Bearer SEU_TOKEN
 Content-Type: multipart/form-data
 ```
 
