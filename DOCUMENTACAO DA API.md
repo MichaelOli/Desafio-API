@@ -339,7 +339,7 @@ curl -X POST "http://localhost:8000/auth/login" \
 ```bash
 curl -X POST "http://localhost:8000/documentos/upload" \
   -H "Authorization: Bearer SEU_TOKEN" \
-  -F "arquivo=@documento.pdf"
+  -F "arquivodocumento.pdf"
 ```
 
 4. **Listar documentos:**
