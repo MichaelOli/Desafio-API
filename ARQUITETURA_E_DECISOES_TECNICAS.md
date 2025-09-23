@@ -256,8 +256,8 @@ def processar_upload_pdf(arquivo: UploadFile) -> Tuple[str, int]:
 ### **1. Operações Assíncronas**
 
 - FastAPI com `async/await`
-- Não bloqueia o servidor durante I/O
-- Melhor throughput de requisições
+- Não bloqueia o servidor durante processamento de entrada e saida
+- Consigo processar mais requisições por segundo
 
 ### **2. Validação Eficiente**
 
