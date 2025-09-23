@@ -5,7 +5,7 @@ from typing import Tuple
 
 
 class ServicoDocumento:
-    """Servico para operações relacionadas a documentos PDF"""
+    """Classe para operações relacionadas a documentos PDF"""
 
     @staticmethod
     def validar_arquivo_pdf(arquivo: UploadFile) -> bool:

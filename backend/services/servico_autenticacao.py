@@ -12,7 +12,7 @@ from backend.schemas.usuario import TokenDados
 
 # Configurações de segurança
 CHAVE_SECRETA = os.getenv("CHAVE_SECRETA")
-ALGORITMO = "HS256"
+ALGORITMO_JWT = "HS256"
 MINUTOS_EXPIRACAO_TOKEN = 30
 
 # Contexto para criptografia de senhas
@@ -48,7 +48,7 @@ class ServicoAutenticacao:
             senha: Senha digitada pelo usuário
 
         Returns:
-            str: Hash criptográfico da senha
+            str: Hash criptogradado da senha
         """
         return contexto_senhas.hash(senha)
 
@@ -75,7 +75,7 @@ class ServicoAutenticacao:
             )
 
         dados_para_codificar.update({"exp": data_expiracao})
-        token_jwt = jwt.encode(dados_para_codificar, CHAVE_SECRETA, algorithm=ALGORITMO)
+        token_jwt = jwt.encode(dados_para_codificar, CHAVE_SECRETA, algorithm=ALGORITMO_JWT)
         return token_jwt
 
     @staticmethod
@@ -94,7 +94,7 @@ class ServicoAutenticacao:
             HTTPException: Se token inválido
         """
         try:
-            dados_token = jwt.decode(token, CHAVE_SECRETA, algorithms=[ALGORITMO])
+            dados_token = jwt.decode(token, CHAVE_SECRETA, algorithms=[ALGORITMO_JWT])
             nome_usuario: str = dados_token.get("sub")
             if nome_usuario is None:
                 raise excecao_credenciais
