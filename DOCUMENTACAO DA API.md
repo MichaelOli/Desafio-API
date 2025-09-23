@@ -353,9 +353,9 @@ curl -X GET "http://localhost:8000/documentos/" \
 
 ### Erro 401 Unauthorized
 
-- Verifique se o token está correto
+- Verifique se o token tá correto
 - Confirme se o token nao expirou (30 minutos)
-- Certifique-se de incluir "Bearer " antes do token
+- Certifique-se de incluir "Bearer " antes do token caso utilize requisicções com curl ou invoke
 
 ### Erro 400 Bad Request no Upload
 
