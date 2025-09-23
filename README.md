@@ -58,7 +58,37 @@ poetry install
 poetry run uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-### Método 2: Docker
+### Método 2: pip + requirements.txt
+
+1. Clone o repositório:
+
+```bash
+git clone <https://github.com/MichaelOli/Desafio-API/>
+cd Desafio_API
+```
+
+2. Crie um ambiente virtual:
+
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# ou
+venv\Scripts\activate  # Windows
+```
+
+3. Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Execute a aplicação:
+
+```bash
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+
+### Método 3: Docker
 
 1. Execute com Docker Compose:
 
@@ -141,7 +171,7 @@ curl -X POST "http://localhost:8000/auth/login" \
 
 ```bash
 curl -X POST "http://localhost:8000/documentos/upload" \
-  -H "Authorization: Bearer SEU_TOKEN_AQUI" \
+  -H "Authorization: Bearer SEU_TOKEN" \
   -F "arquivo=@documento.pdf"
 ```
 
@@ -149,7 +179,7 @@ curl -X POST "http://localhost:8000/documentos/upload" \
 
 ```bash
 curl -X GET "http://localhost:8000/documentos/" \
-  -H "Authorization: Bearer SEU_TOKEN_AQUI"
+  -H "Authorization: Bearer SEU_TOKEN"
 ```
 
 ## Segurança
