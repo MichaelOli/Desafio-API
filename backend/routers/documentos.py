@@ -81,7 +81,7 @@ async def obter_documento(
     if not documento:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Documento não encontrado"
+            detail="Documento nao encontrado"
         )
     
     return documento
@@ -97,7 +97,7 @@ async def atualizar_documento(
     Atualiza um documento existente
     
     - **id_documento**: ID do documento
-    - **documento_atualizacao**: Dados para atualização
+    - **documento_atualizacao**: Dados para atualizacao
     """
     documento = db.query(DocumentoTexto).filter(
         DocumentoTexto.id == id_documento,
@@ -107,7 +107,7 @@ async def atualizar_documento(
     if not documento:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Documento não encontrado"
+            detail="Documento nao encontrado"
         )
     
     # Atualizar apenas campos fornecidos
@@ -139,7 +139,7 @@ async def deletar_documento(
     if not documento:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Documento não encontrado"
+            detail="Documento nao encontrado"
         )
     
     db.delete(documento)
