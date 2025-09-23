@@ -153,7 +153,7 @@ desafio_api/
 
 ---
 
-## 🔄 Fluxo de Dados e Processamento
+## Fluxo de Dados e Processamento
 
 ### **1. Upload de PDF**
 
@@ -181,7 +181,7 @@ Request → Router → Service → Database → Response
 
 ---
 
-## 🛡️ Segurança Implementada
+##  Segurança Implementada
 
 ### **1. Autenticação JWT**
 
@@ -208,7 +208,7 @@ Request → Router → Service → Database → Response
 
 ---
 
-## 📊 Processamento de PDFs
+##  Processamento de PDFs
 
 ### **PyPDF2** - Biblioteca de Extração
 
@@ -251,7 +251,7 @@ def processar_upload_pdf(arquivo: UploadFile) -> Tuple[str, int]:
 
 ---
 
-## 🚀 Performance e Otimizações
+## Performance e Otimizações
 
 ### **1. Operações Assíncronas**
 
@@ -279,7 +279,7 @@ def processar_upload_pdf(arquivo: UploadFile) -> Tuple[str, int]:
 
 ---
 
-## 🧪 Testabilidade e Qualidade
+## Testabilidade e Qualidade
 
 ### **1. Separação de Responsabilidades**
 
@@ -301,7 +301,7 @@ def processar_upload_pdf(arquivo: UploadFile) -> Tuple[str, int]:
 
 ---
 
-## 📈 Escalabilidade e Manutenibilidade
+## Escalabilidade e Manutenibilidade
 
 ### **1. Arquitetura Modular**
 
@@ -323,7 +323,7 @@ def processar_upload_pdf(arquivo: UploadFile) -> Tuple[str, int]:
 
 ---
 
-## 🔮 Melhorias Futuras
+## Melhorias Futuras
 
 ### **1. Banco de Dados**
 
@@ -351,7 +351,7 @@ def processar_upload_pdf(arquivo: UploadFile) -> Tuple[str, int]:
 
 ---
 
-## 💡 Lições Aprendidas
+## Lições Aprendidas
 
 ### **1. Arquitetura**
 
@@ -379,7 +379,7 @@ def processar_upload_pdf(arquivo: UploadFile) -> Tuple[str, int]:
 
 ---
 
-## 🎯 Conclusão
+## Conclusão
 
 Esta API foi desenvolvida seguindo **boas práticas da indústria** e **padrões arquiteturais reconhecidos**. A escolha de tecnologias foi baseada em:
 
