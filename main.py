@@ -10,7 +10,8 @@ app = FastAPI(
     title="API de Extração de Texto de PDF",
     description="API para upload de arquivos PDF, desafio Central IT, para extração de texto e gerenciamento de documentos",
     version="1.0.0",
-    docs_url="/docs"
+    docs_url="/docs",
+    redoc_url= None
 )
 
 # Configuração de CORS

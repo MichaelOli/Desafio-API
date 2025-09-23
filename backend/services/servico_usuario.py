@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
 from backend.models import Usuario
 from backend.schemas.usuario import UsuarioCriar, UsuarioAtualizar
-from backend.utils.autenticacao import gerar_hash_senha, verificar_senha
+from backend.services.servico_autenticacao import ServicoAutenticacao
 
 class ServicoUsuario:
     """Service para operações relacionadas a usuarios"""
@@ -52,7 +52,7 @@ class ServicoUsuario:
             )
         
         # Criar novo usuario
-        senha_hash = gerar_hash_senha(usuario_dados.senha)
+        senha_hash = ServicoAutenticacao.gerar_hash_senha(usuario_dados.senha)
         db_usuario = Usuario(
             nome_usuario=usuario_dados.nome_usuario,
             email=usuario_dados.email,
@@ -100,7 +100,7 @@ class ServicoUsuario:
         # Buscar usuario
         usuario = ServicoUsuario.buscar_usuario_por_nome(db, nome_usuario)
         
-        if not usuario or not verificar_senha(senha, usuario.senha_hash):
+        if not usuario or not ServicoAutenticacao.verificar_senha(senha, usuario.senha_hash):
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Credenciais inválidas ou usuario nao existe no sistema",
@@ -144,7 +144,7 @@ class ServicoUsuario:
         
         # Se senha for fornecida, gerar hash
         if 'senha' in dados_dict:
-            dados_dict['senha_hash'] = gerar_hash_senha(dados_dict.pop('senha'))
+            dados_dict['senha_hash'] = ServicoAutenticacao.gerar_hash_senha(dados_dict.pop('senha'))
         
         for campo, valor in dados_dict.items():
             setattr(usuario, campo, valor)

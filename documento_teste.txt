@@ -1,0 +1,1 @@
+Este é um documento de teste para extração de texto. to testando para verificar se conseguimos extrair o texto.
