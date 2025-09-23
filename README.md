@@ -2,16 +2,16 @@
 
 ## Descrição
 
-API desenvolvida em FastAPI para upload de arquivos PDF, extração automática de texto e gerenciamento de documentos. O sistema implementa autenticação JWT, CRUD completo e documentação automática via Swagger.
+API desenvolvida em FastAPI para upload de arquivos PDF, extraçao automatica de texto e gerenciamento de documentos. O sistema implementa autenticaçao JWT, CRUD completo e documentação automática via Swagger.
 
 ## Funcionalidades
 
-- **Upload de PDF**: Recebimento e validação de arquivos PDF
+- **Upload de PDF**: Recebimento e validaçao de arquivos PDF
 - **Extração de Texto**: Extração automática de texto usando PyPDF2
 - **Autenticação JWT**: Sistema seguro de login e registro
 - **CRUD Completo**: Criar, listar, consultar, atualizar e deletar documentos
 - **Documentação Automática**: Swagger UI integrado
-- **Validação de Dados**: Pydantic para validação eficiente
+- **validaçao de Dados**: Pydantic para validaçao eficiente
 - **Banco SQLite**: Persistência de dados local
 
 ## Tecnologias Utilizadas
@@ -21,7 +21,7 @@ API desenvolvida em FastAPI para upload de arquivos PDF, extração automática 
 - **SQLite**: Banco de dados leve e eficiente
 - **JWT**: Autenticação stateless
 - **PyPDF2**: Extração de texto de PDFs
-- **Pydantic**: Validação e serialização de dados
+- **Pydantic**: validaçao e serialização de dados
 - **Docker**: Containerização da aplicação
 - **Poetry**: Gerenciamento de dependências
 
@@ -31,7 +31,7 @@ API desenvolvida em FastAPI para upload de arquivos PDF, extração automática 
 - Poetry (gerenciador de dependências)
 - Docker (opcional, para containerização)
 
-## Instalação e Execução
+## Instalação e Execuçao
 
 ### Método 1: Poetry (Recomendado)
 
@@ -113,7 +113,7 @@ Desafio_API/
 │   │   ├── auth.py         # Autenticação
 │   │   └── documentos.py   # CRUD de documentos
 │   ├── schemas/             # Schemas Pydantic
-│   │   ├── usuario.py      # Schemas de usuário
+│   │   ├── usuario.py      # Schemas de usuario
 │   │   └── documento.py    # Schemas de documento
 │   └── services/            # Lógica de negócio
 │       ├── servico_autenticacao.py
@@ -130,21 +130,23 @@ Desafio_API/
 
 ### Autenticação
 
-- **POST /auth/registrar**: Registrar novo usuário
+- **POST /auth/registrar**: Registrar novo usuario
 - **POST /auth/login**: Fazer login e obter token
-- **GET /auth/me**: Obter dados do usuário atual
+- **GET /auth/me**: Obter dados do usuario atual
+
+- **Observações:** No proprio Swagger ao obter o token, é possivel informar o token gerado no simbolo do cadeado para que possa utilizar as rotas que realizam as operações de CRUD.
 
 ### Documentos
 
 - **POST /documentos/upload**: Upload de arquivo PDF
-- **GET /documentos/**: Listar documentos do usuário
+- **GET /documentos/**: Listar documentos do usuario
 - **GET /documentos/{id}**: Obter documento específico
 - **PUT /documentos/{id}**: Atualizar documento
 - **DELETE /documentos/{id}**: Deletar documento
 
 ## Exemplos de Uso
 
-### 1. Registrar Usuário
+### 1. Registrar usuario
 
 ```bash
 curl -X POST "http://localhost:8000/auth/registrar" \
@@ -190,11 +192,11 @@ curl -X GET "http://localhost:8000/documentos/" \
 - Algoritmo HS256 para assinatura
 - Chave secreta configurável via variável de ambiente
 
-### Validação de Dados
+### validaçao de Dados
 
-- Validação automática de tipos e formatos
-- Sanitização de entradas do usuário
-- Validação de arquivos PDF
+- validaçao automática de tipos e formatos
+- Sanitização de entradas do usuario
+- validaçao de arquivos PDF
 
 ### Criptografia
 
