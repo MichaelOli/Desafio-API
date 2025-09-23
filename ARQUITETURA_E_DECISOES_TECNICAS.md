@@ -284,14 +284,14 @@ def processar_upload_pdf(arquivo: UploadFile) -> Tuple[str, int]:
 ### **1. Separação de Responsabilidades**
 
 - Services testáveis independentemente
-- Mocks fáceis de implementar
+- Funcionalidades fáceis de implementar
 - Testes unitários isolados
 
 ### **2. Injeção de Dependência**
 
 - FastAPI com `Depends()`
 - Fácil substituição de dependências
-- Testes com mocks
+- Testes com simulação de dependencias
 
 ### **3. Validação de Dados**
 
