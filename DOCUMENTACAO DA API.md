@@ -6,19 +6,19 @@
 http://localhost:8000
 ```
 
-## Autenticação
+## autenticacao
 
-A API utiliza JWT (JSON Web Tokens) para autenticação. Para acessar endpoints protegidos, inclua o token no header Authorization:
+A API utiliza JWT (JSON Web Tokens) para autenticacao. Para acessar endpoints protegidos, inclua o token no header Authorization:
 
 ```
 Authorization: Bearer SEU_TOKEN
 ```
-
-## Endpoints de Autenticação
+Ou utilize o Swagger para navegar entre os endpoints.
+## Endpoints de autenticacao
 
 ### POST /auth/registrar
 
-Registra um novo usuário no sistema.
+Registra um novo usuario no sistema.
 
 **Request Body:**
 
@@ -36,7 +36,7 @@ Registra um novo usuário no sistema.
 {
   "id": 1,
   "nome_usuario": "usuario_teste",
-  "email": "usuario@exemplo.com",
+  "email": "usuario@teste.com",
   "ativo": true,
   "data_criacao": "2025-09-23T00:56:04",
   "data_atualizacao": null
@@ -77,7 +77,7 @@ Autentica um usuario e retorna token de acesso.
 
 ### GET /auth/eu
 
-Retorna os dados do usuário autenticado.
+Retorna os dados do usuario autenticado.
 
 **Headers:**
 
@@ -91,7 +91,7 @@ Authorization: Bearer SEU_TOKEN
 {
   "id": 1,
   "nome_usuario": "usuario_teste",
-  "email": "usuario@exemplo.com",
+  "email": "usuario@teste.com",
   "ativo": true,
   "data_criacao": "2025-09-23T00:56:04",
   "data_atualizacao": null
@@ -127,7 +127,7 @@ arquivo: [arquivo PDF]
 {
   "id": 1,
   "nome_arquivo": "documento.pdf",
-  "texto_extraido": "Conteúdo extraído do PDF...",
+  "texto_extraido": "conteudo extraido do PDF...",
   "tamanho_arquivo": 1024000,
   "usuario_id": 1,
   "data_criacao": "2025-09-23T00:59:14",
@@ -135,26 +135,28 @@ arquivo: [arquivo PDF]
 }
 ```
 
-**Códigos de Erro:**
+**Codigos de Erro:**
 
-- `400 Bad Request`: Arquivo inválido ou erro na extração
-- `401 Unauthorized`: Token inválido ou expirado
-- `422 Unprocessable Entity`: Erro de validação
+- `400 Bad Request`: Arquivo invalido ou erro na extracao
+- `401 Unauthorized`: Token invalido ou expirado
+- `422 Unprocessable Entity`: Erro de validacao
 
 ### GET /documentos/
 
-Lista todos os documentos do usuário autenticado.
+Lista todos os documentos do usuario autenticado.
 
 **Headers:**
 
 ```
-Authorization: Bearer SEU_TOKEN_AQUI
+Authorization: Bearer SEU_TOKEN
 ```
 
 **Query Parameters:**
 
-- `pular` (int, opcional): Número de registros para pular (padrão: 0)
-- `limite` (int, opcional): Número máximo de registros (padrão: 100)
+-Levando em consideracao que a api possa ter muitos documentos.
+
+- `pular` (int, opcional): Numero de registros para pular (padrao: 0)
+- `limite` (int, opcional): Numero maximo de registros (padrao: 100)
 
 **Response (200 OK):**
 
@@ -171,16 +173,16 @@ Authorization: Bearer SEU_TOKEN_AQUI
 
 **Códigos de Erro:**
 
-- `401 Unauthorized`: Token inválido ou expirado
+- `401 Unauthorized`: Token invalido ou expirado
 
 ### GET /documentos/{id}
 
-Obtém um documento específico pelo ID.
+obtem um documento especifico pelo ID.
 
 **Headers:**
 
 ```
-Authorization: Bearer SEU_TOKEN_AQUI
+Authorization: Bearer SEU_TOKEN
 ```
 
 **Path Parameters:**
@@ -193,7 +195,7 @@ Authorization: Bearer SEU_TOKEN_AQUI
 {
   "id": 1,
   "nome_arquivo": "documento.pdf",
-  "texto_extraido": "Conteúdo extraído do PDF...",
+  "texto_extraido": "conteudo extraido do PDF...",
   "tamanho_arquivo": 1024000,
   "usuario_id": 1,
   "data_criacao": "2025-09-23T00:59:14",
@@ -203,8 +205,8 @@ Authorization: Bearer SEU_TOKEN_AQUI
 
 **Códigos de Erro:**
 
-- `401 Unauthorized`: Token inválido ou expirado
-- `404 Not Found`: Documento não encontrado
+- `401 Unauthorized`: Token invalido ou expirado
+- `404 Not Found`: Documento nao encontrado
 
 ### PUT /documentos/{id}
 
@@ -213,7 +215,7 @@ Atualiza um documento existente.
 **Headers:**
 
 ```
-Authorization: Bearer SEU_TOKEN_AQUI
+Authorization: Bearer SEU_TOKEN
 Content-Type: application/json
 ```
 
@@ -246,9 +248,9 @@ Content-Type: application/json
 
 **Códigos de Erro:**
 
-- `401 Unauthorized`: Token inválido ou expirado
-- `404 Not Found`: Documento não encontrado
-- `422 Unprocessable Entity`: Erro de validação
+- `401 Unauthorized`: Token invalido ou expirado
+- `404 Not Found`: Documento nao encontrado
+- `422 Unprocessable Entity`: Erro de validacao
 
 ### DELETE /documentos/{id}
 
@@ -257,7 +259,7 @@ Deleta um documento.
 **Headers:**
 
 ```
-Authorization: Bearer SEU_TOKEN_AQUI
+Authorization: Bearer SEU_TOKEN
 ```
 
 **Path Parameters:**
@@ -267,56 +269,56 @@ Authorization: Bearer SEU_TOKEN_AQUI
 **Response (204 No Content):**
 
 ```
-(Sem conteúdo)
+(Sem conteudo)
 ```
 
 **Códigos de Erro:**
 
-- `401 Unauthorized`: Token inválido ou expirado
-- `404 Not Found`: Documento não encontrado
+- `401 Unauthorized`: Token invalido ou expirado
+- `404 Not Found`: Documento nao encontrado
 
 ## Códigos de Status HTTP
 
 - `200 OK`: Requisição bem-sucedida
 - `201 Created`: Recurso criado com sucesso
 - `204 No Content`: Operação bem-sucedida sem retorno
-- `400 Bad Request`: Dados inválidos na requisição
-- `401 Unauthorized`: Token inválido ou expirado
-- `404 Not Found`: Recurso não encontrado
-- `422 Unprocessable Entity`: Erro de validação de dados
+- `400 Bad Request`: Dados invalidos na requisição
+- `401 Unauthorized`: Token invalido ou expirado
+- `404 Not Found`: Recurso nao encontrado
+- `422 Unprocessable Entity`: Erro de validacao de dados
 
 ## Limitações e Validações
 
 ### Upload de Arquivos
 
 - **Tipo permitido**: Apenas arquivos PDF
-- **Validação**: Verificação de extensão e tipo MIME
-- **Tamanho**: Limitado pela configuração do servidor
+- **validacao**: verificacao de extensao
+- **Tamanho**: Limitado pela configuracao do servidor/database plugado na api
 
-### Autenticação
+### autenticacao
 
 - **Expiração do token**: 30 minutos
 - **Algoritmo**: HS256
 - **Formato**: Bearer token
 
-### Dados de Usuário
+### Dados de usuario
 
-- **Nome de usuário**: Único, obrigatório
-- **Email**: Único, formato válido obrigatório
+- **Nome de usuario**: unico, obrigatório
+- **Email**: unico, formato válido obrigatório
 - **Senha**: Mínimo de caracteres (configurável)
 
-## Exemplos de Uso Completos
+## testes de Uso Completos
 
 ### Fluxo Completo: Registro, Login e Upload
 
-1. **Registrar usuário:**
+1. **Registrar usuario:**
 
 ```bash
 curl -X POST "http://localhost:8000/auth/registrar" \
   -H "Content-Type: application/json" \
   -d '{
     "nome_usuario": "usuario_teste",
-    "email": "usuario@exemplo.com",
+    "email": "usuario@teste.com",
     "senha": "senha123"
   }'
 ```
@@ -336,7 +338,7 @@ curl -X POST "http://localhost:8000/auth/login" \
 
 ```bash
 curl -X POST "http://localhost:8000/documentos/upload" \
-  -H "Authorization: Bearer SEU_TOKEN_AQUI" \
+  -H "Authorization: Bearer SEU_TOKEN" \
   -F "arquivo=@documento.pdf"
 ```
 
@@ -344,7 +346,7 @@ curl -X POST "http://localhost:8000/documentos/upload" \
 
 ```bash
 curl -X GET "http://localhost:8000/documentos/" \
-  -H "Authorization: Bearer SEU_TOKEN_AQUI"
+  -H "Authorization: Bearer SEU_TOKEN"
 ```
 
 ## Troubleshooting
@@ -352,14 +354,14 @@ curl -X GET "http://localhost:8000/documentos/" \
 ### Erro 401 Unauthorized
 
 - Verifique se o token está correto
-- Confirme se o token não expirou (30 minutos)
+- Confirme se o token nao expirou (30 minutos)
 - Certifique-se de incluir "Bearer " antes do token
 
 ### Erro 400 Bad Request no Upload
 
 - Verifique se o arquivo é um PDF válido
-- Confirme se o arquivo não está corrompido
-- Verifique se o arquivo tem conteúdo de texto
+- Confirme se o arquivo nao está corrompido
+- Verifique se o arquivo tem conteudo de texto
 
 ### Erro 422 Unprocessable Entity
 
@@ -369,7 +371,7 @@ curl -X GET "http://localhost:8000/documentos/" \
 
 ## Rate Limiting
 
-Atualmente não há rate limiting implementado, mas é recomendado para produção.
+Atualmente nao há rate limiting implementado, mas é recomendado para produção.
 
 ## Versionamento
 
