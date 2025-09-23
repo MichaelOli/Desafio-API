@@ -38,7 +38,7 @@ API desenvolvida em FastAPI para upload de arquivos PDF, extraçao automatica de
 1. Clone o repositório:
 
 ```bash
-git clone <https://github.com/MichaelOli/Desafio-API/>
+git clone <https://github.com/MichaelOli/Desafio-API>
 cd Desafio_API
 ```
 
@@ -63,7 +63,7 @@ poetry run uvicorn main:app --reload --host 0.0.0.0 --port 8000
 1. Clone o repositório:
 
 ```bash
-git clone <https://github.com/MichaelOli/Desafio-API/>
+git clone <https://github.com/MichaelOli/Desafio-API>
 cd Desafio_API
 ```
 
@@ -138,7 +138,7 @@ Desafio_API/
 
 - **Nota sobre CRUD de Usuário:** Iniciei a implementação das operações de atualização e exclusão de usuários (métodos PUT e DELETE), mas não foi possível finalizar devido ao tempo limitado. Os serviços estão implementados no backend, porém as rotas não foram expostas na API. O sistema atual permite apenas registro e consulta de dados do usuário logado.
 
-### Documentos
+### CRUD de Documentos
 
 - **POST /documentos/upload**: Upload de arquivo PDF
 - **GET /documentos/**: Listar documentos do usuario
@@ -229,7 +229,7 @@ DATABASE_URL=sqlite:///./desafio_api.db
 poetry run uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-### Formatação de Código - Essas bibliotecas aqui são sensacionais, aprendi elas numa aula de engenharia de dados que eu to cursando, formata a identacao do codigo sem quebrar nada como mágica.
+### Formatação de Código - Essa biblioteca aqui é sensacional, aprendi ela numa aula de engenharia de dados que eu to cursando, formata a identacao do codigo sem quebrar nada como mágica.
 
 ```bash
 poetry run black /pasta-a-ser-formatado
