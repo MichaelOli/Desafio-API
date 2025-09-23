@@ -369,10 +369,3 @@ curl -X GET "http://localhost:8000/documentos/" \
 - Confirme se todos os campos obrigatorios estão preenchidos
 - Verifique se os tipos de dados estão corretos
 
-## Rate Limiting
-
-Atualmente nao há rate limiting implementado, mas é recomendado para produção.
-
-## Versionamento
-
-A API está na versão 1.0.0. Mudanças significativas serão versionadas adequadamente.
