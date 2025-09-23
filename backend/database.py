@@ -9,6 +9,7 @@ engine = create_engine(URL_DATABASE)
 sessaolocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 base = declarative_base()
 
+
 def conexao_db():
     db = sessaolocal()
     try:

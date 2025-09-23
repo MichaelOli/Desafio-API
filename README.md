@@ -215,7 +215,7 @@ curl -X GET "http://localhost:8000/documentos/" \
 Crie um arquivo `.env` na raiz do projeto:
 
 ```env
-SECRET_KEY=sua-chave-secreta-super-segura-aqui
+CHAVE_SECRETA=sua-chave-secreta-super-segura-aqui
 DATABASE_URL=sqlite:///./desafio_api.db
 ```
 
@@ -227,32 +227,19 @@ DATABASE_URL=sqlite:///./desafio_api.db
 poetry run uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-### Executar Testes
+
+### Formatação de Código - Essas bibliotecas aqui são sensacionais, aprendi elas numa aula de engenharia de dados que eu to cursando, formata a identacao do codigo sem quebrar nada como mágica.
 
 ```bash
-poetry run pytest
+poetry run black /pasta-a-ser-formatado
 ```
-
-### Formatação de Código
-
-```bash
-poetry run black .
-poetry run isort .
-```
-
-## Contribuição
-
-1. Fork o projeto
-2. Crie uma branch para sua feature
-3. Commit suas mudanças
-4. Push para a branch
-5. Abra um Pull Request
 
 ## Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+Este projeto está sob a licença MIT. Então pode copiar, utilizar para estudos, vender, o que achar mais interessante para o seu uso!
 
 ## Autor
 
-Desenvolvido por Michael Oliveira Ribeiro
-Email: michaeloliveira38@gmail.com
+**Desenvolvido por: Michael Oliveira Ribeiro**
+**Email:** michaeloliveira38@gmail.com
+**linkedin:** <https://www.linkedin.com/in/mor-michael/>
