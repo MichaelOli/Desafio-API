@@ -303,8 +303,8 @@ Authorization: Bearer SEU_TOKEN
 
 ### Dados de usuario
 
-- **Nome de usuario**: unico, obrigatório
-- **Email**: unico, formato válido obrigatório
+- **Nome de usuario**: unico, obrigatorio
+- **Email**: unico, formato valido obrigatorio
 - **Senha**: Mínimo de caracteres (configurável)
 
 ## testes de Uso Completos
@@ -359,14 +359,14 @@ curl -X GET "http://localhost:8000/documentos/" \
 
 ### Erro 400 Bad Request no Upload
 
-- Verifique se o arquivo é um PDF válido
+- Verifique se o arquivo é um PDF valido
 - Confirme se o arquivo nao está corrompido
 - Verifique se o arquivo tem conteudo de texto
 
 ### Erro 422 Unprocessable Entity
 
 - Verifique o formato dos dados enviados
-- Confirme se todos os campos obrigatórios estão preenchidos
+- Confirme se todos os campos obrigatorios estão preenchidos
 - Verifique se os tipos de dados estão corretos
 
 ## Rate Limiting
