@@ -323,62 +323,6 @@ def processar_upload_pdf(arquivo: UploadFile) -> Tuple[str, int]:
 
 ---
 
-## Melhorias Futuras
-
-### **1. Banco de Dados**
-
-- Migração para PostgreSQL em produção
-- Connection pooling
-- Replicação para alta disponibilidade
-
-### **2. Processamento de PDF**
-
-- Suporte a OCR para PDFs escaneados
-- Extração de metadados
-- Processamento em background
-
-### **3. Segurança**
-
-- Rate limiting
-- Logs de auditoria
-- Criptografia de dados sensíveis
-
-### **4. Performance**
-
-- Cache com Redis
-- CDN para arquivos estáticos
-- Load balancing
-
----
-
-## Lições Aprendidas
-
-### **1. Arquitetura**
-
-- Service Layer Pattern é excelente para APIs
-- Separação de responsabilidades facilita manutenção
-- FastAPI + Pydantic é uma combinação poderosa
-
-### **2. Segurança**
-
-- JWT é ideal para APIs stateless
-- Bcrypt é suficiente para hash de senhas
-- Validação de dados é crucial
-
-### **3. Desenvolvimento**
-
-- Type hints melhoram muito a experiência
-- Documentação automática economiza tempo
-- Testes são essenciais para qualidade
-
-### **4. Deploy**
-
-- Docker facilita deployment
-- SQLite é ótimo para desenvolvimento
-- Poetry gerencia dependências muito bem
-
----
-
 ## Conclusão
 
 Esta API foi desenvolvida seguindo **boas práticas da indústria** e **padrões arquiteturais reconhecidos**. A escolha de tecnologias foi baseada em:
@@ -388,13 +332,5 @@ Esta API foi desenvolvida seguindo **boas práticas da indústria** e **padrões
 3. **Manutenibilidade**: Código limpo e bem estruturado
 4. **Segurança**: Práticas de segurança implementadas
 5. **Escalabilidade**: Arquitetura preparada para crescimento
-
-O projeto demonstra competência em:
-
-- **Desenvolvimento de APIs RESTful**
-- **Arquitetura de software**
-- **Segurança de aplicações**
-- **Processamento de documentos**
-- **Boas práticas de desenvolvimento**
 
 Esta base sólida permite evolução e adaptação conforme necessidades futuras, mantendo sempre a qualidade e performance da aplicação.
