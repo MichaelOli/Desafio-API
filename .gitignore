@@ -11,3 +11,6 @@ __pycache__/
 *.pdf
 *.txt
 documento_teste.txt
+
+# Pasta frontend (não faz parte do desafio)
+frontend/
