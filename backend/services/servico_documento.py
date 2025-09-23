@@ -31,7 +31,7 @@ class ServicoDocumento:
         vai conseguir ler documentos com textos complexos e se ler vai bagunçar tudo.
 
         Args:
-            conteudo_pdf: Conteúdo binário do PDF
+            conteudo_pdf: conteudo binário do PDF
 
         Returns:
             str: Texto extraído do PDF
@@ -75,7 +75,7 @@ class ServicoDocumento:
                 detail="Apenas arquivos PDF são aceitos",
             )
 
-        # Ler conteúdo do arquivo
+        # Ler conteudo do arquivo
         conteudo_arquivo = arquivo.file.read()
         tamanho_arquivo = len(conteudo_arquivo)
 
