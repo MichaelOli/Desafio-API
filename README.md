@@ -136,6 +136,8 @@ Desafio_API/
 
 - **Observações:** No proprio Swagger ao obter o token, é possivel informar o token gerado no simbolo do cadeado para que possa utilizar as rotas que realizam as operações de CRUD.
 
+- **Nota sobre CRUD de Usuário:** Iniciei a implementação das operações de atualização e exclusão de usuários (métodos PUT e DELETE), mas não foi possível finalizar devido ao tempo limitado. Os serviços estão implementados no backend, porém as rotas não foram expostas na API. O sistema atual permite apenas registro e consulta de dados do usuário logado.
+
 ### Documentos
 
 - **POST /documentos/upload**: Upload de arquivo PDF
@@ -226,7 +228,6 @@ DATABASE_URL=sqlite:///./desafio_api.db
 ```bash
 poetry run uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
-
 
 ### Formatação de Código - Essas bibliotecas aqui são sensacionais, aprendi elas numa aula de engenharia de dados que eu to cursando, formata a identacao do codigo sem quebrar nada como mágica.
 
