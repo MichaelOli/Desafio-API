@@ -16,7 +16,9 @@ router = APIRouter()
 
 
 @router.post(
-    "/upload", response_model=DocumentoResposta, status_code=status.HTTP_201_CREATED
+    "/upload", 
+    response_model=DocumentoResposta, 
+    status_code=status.HTTP_201_CREATED
 )
 async def upload_documento(
     arquivo: UploadFile = File(...),

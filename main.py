@@ -32,7 +32,7 @@ app.include_router(auth.router, prefix="/auth", tags=["Rotas deAutenticação"])
 app.include_router(
     documentos.router,
     prefix="/documentos",
-    tags=["Rotas para realizar o CRUD do documentos"],
+    tags=["Rotas para realizar o CRUD do documentos"]
 )
 
 
