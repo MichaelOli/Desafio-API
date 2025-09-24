@@ -9,5 +9,5 @@ __pycache__/
 
 # Arquivos de teste
 *.pdf
-*.txt
+
 documento_teste.txt

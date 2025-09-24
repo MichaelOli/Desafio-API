@@ -1,0 +1,33 @@
+# Dependências do projeto Desafio API
+# Gerado automaticamente a partir do pyproject.toml
+
+# Framework web
+fastapi>=0.116.2,<0.117.0
+uvicorn>=0.35.0,<0.36.0
+
+# Banco de dados
+sqlalchemy>=2.0.43,<3.0.0
+psycopg2-binary>=2.9.0,<3.0.0
+
+# Autenticação e segurança
+python-jose[cryptography]>=3.5.0,<4.0.0
+passlib[bcrypt]>=1.7.4,<2.0.0
+bcrypt==4.0.1
+
+# Validação de dados
+email-validator>=2.3.0,<3.0.0
+
+# Upload de arquivos
+python-multipart>=0.0.20,<0.0.21
+
+# Processamento de PDF
+pypdf2>=3.0.1,<4.0.0
+
+# Variáveis de ambiente
+python-dotenv>=1.1.1,<2.0.0
+
+
+python-multipart>=0.0.20,<0.0.21
+
+
+psycopg2-binary>=2.9.0,<3.0.0
